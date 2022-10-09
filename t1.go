@@ -2,14 +2,24 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
 
 type Human struct {
 	name string
-	age int64
-	
+	age int
+}
+
+type Action struct {
+	Human
+}
+
+func (h Human) viewInfo() string {
+	// resStr := ""
+	return "name: " + h.name + " age: " + strconv.Itoa(h.age)
 }
 
 func main() {
-	fmt.Println("Human struct realization");
+	h := Human{name: "Example", age: int(21)}
+	fmt.Println(h.viewInfo())
 }
