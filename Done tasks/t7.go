@@ -56,16 +56,9 @@ func main() {
 	exMap.Store("ex1", 5)
 	exMap.Store("ex2", 66)
 
-	// for v := range exMap.mp {
-	// 	fmt.Println(v)
-	// }
-
 	v, ok := exMap.Load("ex1")
 	printCaseMap(v, ok)
 	exMap.Delete("ex1")
 	v, ok = exMap.Load("ex1")
 	printCaseMap(v, ok)
-	// printCaseMap(exMap.Load("school"))
-	// printCaseMap(exMap.Load("ex1"))
-	// printCaseMap(exMap.Load("ex2"))
 }
