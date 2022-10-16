@@ -7,6 +7,10 @@ import (
 	"fmt"
 )
 
+type lol struct {
+	a int
+}
+
 func whatsType(t interface{}) {
 	switch t.(type) {
 	case int:
@@ -20,7 +24,7 @@ func whatsType(t interface{}) {
 	case chan string:
 		fmt.Println(t, "it's chan string")
 	default:
-		fmt.Println(t, "unknown type")
+		fmt.Println(t, "unknown type: ")
 	}
 }
 
@@ -36,4 +40,6 @@ func main() {
 	whatsType(true)
 	whatsType(ch)
 	whatsType(m)
+	var kek lol
+	whatsType(kek)
 }
